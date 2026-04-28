@@ -1,0 +1,50 @@
+/* Definición de colores pastel */
+:root {
+    --pastel-blue-light: #e3f2fd; 
+    --pastel-blue-medium: #bbdefb;
+    --accent-blue: #64b5f6;
+    --text-blue: #0d47a1;
+}
+body {
+    background-color: #f0f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    color: var(--text-blue);
+}
+.hero {     
+    background: linear-gradient(135deg, var(--pastel-blue-medium), white);     
+    padding: 60px 0;     
+    border-bottom: 5px solid var(--accent-blue); 
+}
+/* Estilo de tarjetas */
+.card-map {    
+    background-color: rgba(255, 255, 255, 0.85);    
+    backdrop-filter: blur(5px);    
+    border: 1px solid var(--pastel-blue-medium);    
+    background-size: cover;    
+    background-position: center;    
+    background-blend-mode: overlay;    
+    min-height: 300px;    
+    transition: transform 0.3s;
+}
+.card-map:hover {     
+    transform: translateY(-10px); 
+}
+/* Imágenes de fondo para los países */
+.bg-arg { 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Argentina_map_modern.svg/300px-Argentina_map_modern.svg.png'); 
+}
+.bg-bra { 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Brazil_map_modern.svg/300px-Brazil_map_modern.svg.png'); 
+}
+.bg-chi { 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Chile_map_modern.svg/300px-Chile_map_modern.svg.png'); 
+}
+.btn-custom {     
+    background-color: var(--accent-blue);     
+    color: white;     
+    border: none; 
+}
+.btn-custom:hover {     
+    background-color: var(--text-blue);     
+    color: white; 
+}
