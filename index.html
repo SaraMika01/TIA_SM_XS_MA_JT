@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativa Laboral Mercosur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="text-center p-5 bg-light">
+    <h1 id="titulo">Análisis Laboral en el Mercosur</h1>
+    <p id="subtitulo">Derechos laborales en Argentina, Brasil y Chile</p>
+    <p id="intro">
+        En el marco del Día del Trabajador, analizamos las leyes laborales y condiciones actuales en distintos países de la región.
+    </p>
+
+    <button class="btn btn-dark" onclick="cambiarIdioma()">Cambiar a Inglés</button>
+</header>
+
+<main class="container py-5">
+    <section class="mb-5">
+        <h2 id="contextoTitulo">Contexto General</h2>
+        <p id="contextoTexto">
+            El trabajo es un pilar fundamental en la sociedad. A través de los años, los países han desarrollado leyes para proteger a los trabajadores y mejorar sus condiciones laborales.
+        </p>
+    </section>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="imagenes/Argentina.png" class="card-img-top" alt="Argentina">
+                <div class="card-body">
+                    <h3 id="argTitulo">Argentina</h3>
+                    <p id="argTexto">
+                        La Ley de Contrato de Trabajo regula la relación entre empleadores y trabajadores.
+                    </p>
+                    <p id="argExtra">
+                        La jornada laboral es de hasta 48 horas semanales y existen derechos como vacaciones pagas, aguinaldo y licencias.
+                    </p>
+                     <p>Ley de Contrato de Trabajo (LCT).</p>
+                     <a href="https://www.argentina.gob.ar/trabajo" target="_blank" class="btn btn-sm btn-outline-primary mt-auto">Sitio Oficial</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="imagenes/Brasil.png" class="card-img-top" alt="Brasil">
+                <div class="card-body">
+                    <h3 id="braTitulo">Brasil</h3>
+                    <p id="braTexto">
+                        La CLT regula las condiciones laborales en todo el país.
+                    </p>
+                    <p id="braExtra">
+                        La jornada es de 44 horas semanales y el sistema ha tenido reformas que permiten mayor flexibilidad laboral.
+                    </p>
+                    <p>Consolidação das Leis do Trabalho (CLT).</p>
+                <a href="https://www.gov.br/trabalho-e-emprego" target="_blank" class="btn btn-sm btn-outline-primary mt-auto">Sitio Oficial</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="imagenes/Chile.png" class="card-img-top" alt="Chile">
+                <div class="card-body">
+                    <h3 id="chiTitulo">Chile</h3>
+                    <p id="chiTexto">
+                        El Código del Trabajo regula las relaciones laborales.
+                    </p>
+                    <p id="chiExtra">
+                        Actualmente se está implementando una reducción progresiva de la jornada laboral a 40 horas semanales.
+                    </p>
+                    <p>Código del Trabajo (Ley 40 horas).</p>
+                <a href="https://www.dt.gob.cl" target="_blank" class="btn btn-sm btn-outline-primary mt-auto">Sitio Oficial</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <section class="py-5">
+        <h2 id="tablaTitulo">Comparación</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th id="thPais">País</th>
+                    <th id="thHoras">Horas semanales</th>
+                    <th id="thEstado">Situación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Argentina</td>
+                    <td>48 hs</td>
+                    <td id="argEstado">Sistema tradicional</td>
+                </tr>
+                <tr>
+                    <td>Brasil</td>
+                    <td>44 hs</td>
+                    <td id="braEstado">Reformas recientes</td>
+                </tr>
+                <tr>
+                    <td>Chile</td>
+                    <td>40 hs</td>
+                    <td id="chiEstado">Reducción en curso</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<script>
+let idioma = "es";
+
+function cambiarIdioma() {
+
+    if (idioma === "es") {
+
+        document.getElementById("titulo").innerText = "Labor Analysis in Mercosur";
+        document.getElementById("subtitulo").innerText = "Labor rights in Argentina, Brazil and Chile";
+        document.getElementById("intro").innerText = "On Workers' Day, we analyze labor laws in the region.";
+
+        document.getElementById("contextoTitulo").innerText = "General Context";
+        document.getElementById("contextoTexto").innerText = "Work is a fundamental part of society. Countries have developed laws to protect workers.";
+
+        document.getElementById("argTexto").innerText = "Labor Contract Law regulates employment.";
+        document.getElementById("argExtra").innerText = "Workweek up to 48 hours with paid vacations and bonuses.";
+
+        document.getElementById("braTexto").innerText = "CLT regulates labor conditions.";
+        document.getElementById("braExtra").innerText = "44-hour workweek with flexible reforms.";
+
+        document.getElementById("chiTexto").innerText = "Labor Code regulates employment.";
+        document.getElementById("chiExtra").innerText = "Reduction to 40 hours is in progress.";
+
+        document.getElementById("tablaTitulo").innerText = "Comparison";
+        document.getElementById("thPais").innerText = "Country";
+        document.getElementById("thHoras").innerText = "Weekly hours";
+        document.getElementById("thEstado").innerText = "Status";
+
+        document.getElementById("argEstado").innerText = "Traditional system";
+        document.getElementById("braEstado").innerText = "Recent reforms";
+        document.getElementById("chiEstado").innerText = "Reduction in progress";
+
+        idioma = "en";
+
+    } else {
+        location.reload();
+    }
+}
+</script>
+
+</body>
+</html>
